@@ -5,7 +5,7 @@ const hostname = "localhost";
 const port = 8000;
 
 app.get("/", (req, res) => {
-  res.status(200).send("Server is running in the backend.");
+  res.status(200).send("Server is running in the backend after folder setup.");
 });
 
 app.listen(port, () => {
