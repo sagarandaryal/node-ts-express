@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import productsRouter from "./routes/productsRoute";
 
@@ -14,7 +14,7 @@ const port = process.env.SERVER_PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res
     .status(200)
     .send(
